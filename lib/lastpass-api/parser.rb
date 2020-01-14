@@ -16,7 +16,7 @@ module Lastpass
 
     # @param (see parse)
     def initialize( raw_string, with_passwords: false )
-      @raw_string = raw_string
+      @raw_string = raw_string.force_encoding('UTF-8')
       @with_passwords = with_passwords
       @all = {}
     end
